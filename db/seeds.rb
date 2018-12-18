@@ -1,8 +1,9 @@
 
-uts "Making some lists..."
-games = List.create(title: "Favorite Games", description: "A list of all my favorite games")
-movies = List.create(title: "Favorite Movies", description: "A list of all my favorite movies")
-todo = List.create(title: "Today's ToDos", description: "A list of things that I need to do today")
+puts "Making some lists..."
+games = List.create(title: "Favorite Games", description: "A list of all my favorite games", type: "Collection")
+movies = List.create(title: "Favorite Movies", description: "A list of all my favorite movies", type: "Collection")
+todo = List.create(title: "Today's ToDos", description: "A list of things that I need to do today", type: "ToDo")
+shopping = List.create(title: "Grocery 12/17/2018", description: "Stuff to buy", type: "Grocery")
 puts "Putting items on each list..."
 games.list_items.create(description: 'Portal 2')
 games.list_items.create(description: 'Quake 3 Arena')
@@ -21,6 +22,12 @@ todo.list_items.create(description: 'Finish Evaluation')
 todo.list_items.create(description: 'Take Nap')
 todo.list_items.create(description: 'Finish 3D printer modifications')
 todo.list_items.create(description: 'Do Laundry')
+
+shopping.list_items.create(description: 'Eggs')
+shopping.list_items.create(description: 'Bacon')
+shopping.list_items.create(description: 'Dr. Pepper Ten')
+shopping.list_items.create(description: 'Beef')
+shopping.list_items.create(description: 'Pringles')
 #Yes those are all factual!
 puts "Done!"
 
